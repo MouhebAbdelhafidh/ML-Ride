@@ -19,5 +19,6 @@ What you'll find here:
 ## 📋 Usage
 To get the most of this repository it's best to follow theses steps:
 1. Visit the [MLS GitHub Repository](https://github.com/ghassen-fatnassi/mls) and take a look at the **MLS RoadMap**
-2. For each step return to **ML Ride** or additional resources, such as research papers, practical projects, notes, and other insights I’ve gathered during my ML learning journey.
-3. Read the research papers, and try implementing these projects on your own to gain hands-on experience.
+2. For each step return to **ML Ride** for additional resources, such as research papers, practical projects, notes, and other insights I’ve gathered during my ML learning journey.
+**Note**: Some ML algorithms are not mentioned in [MLS GitHub Repository](https://github.com/ghassen-fatnassi/mls) resources so I try to cover them in details inside this repository.
+3. Read the articles for better basic algorithms understanding, take a look at the research papers for deeper understanding of real world problems and try implementing these projects on your own to gain hands-on experience.
