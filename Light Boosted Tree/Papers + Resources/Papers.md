@@ -1,2 +1,0 @@
-[The main Light Boosting Tree paper](https://proceedings.neurips.cc/paper_files/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf) <br>
-**Note**: This paper is to remember (I'll be going deeper into this after XGBM)
