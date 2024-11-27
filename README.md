@@ -24,8 +24,10 @@ To get the most of this repository it's best to follow theses steps:
 **Note**: Some ML algorithms are not mentioned in [MLS GitHub Repository](https://github.com/ghassen-fatnassi/mls) resources so I try to cover them in details inside this repository.
 3. Read the articles for better basic algorithms understanding, take a look at the research papers for deeper understanding of real world problems and try implementing these projects on your own to gain hands-on experience.
 
-## </> Algorithms
+## </> Algorithms <br>
+**Supervised Learning :** <br>
 [Linear Regression](https://github.com/MouhebAbdelhafidh/ML-Ride/tree/master/Linear%20Regression) <br>
 [Logistic Regression](https://github.com/MouhebAbdelhafidh/ML-Ride/tree/master/Logistic%20Regression) <br>
 [Decision Tree](https://github.com/MouhebAbdelhafidh/ML-Ride/tree/master/Decision%20Tree) <br>
-[Gradient Boosted Tree](https://github.com/MouhebAbdelhafidh/ML-Ride/tree/master/Gradient%20Boosted%20Tree) <br>
+[Gradient Boosting algorithms](https://github.com/MouhebAbdelhafidh/ML-Ride/tree/master/Gradient%20Boosting) <br>
+**Unsupervised Learning :** <br>
