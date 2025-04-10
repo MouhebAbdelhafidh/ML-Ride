@@ -1,0 +1,2 @@
+[Agents Course from Hugging face](https://huggingface.co/learn/agents-course) is the only resource you will need to build your own LLM Agent.<br>
+The course covers 3 diffrent methods to build Agents with detailed code examples and quizzes. (It's completely free) <br>
