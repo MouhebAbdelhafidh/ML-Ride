@@ -6,6 +6,7 @@
 - [Introduction](#introduction)
 - [Usage](#usage)
 - [Algorithms](#algorithms)
+- [Other](#other)
 
 ## 📜 Introduction
 Welcome to **ML Ride** – a personal journey through the exciting world of Machine Learning! 🚀
@@ -32,3 +33,7 @@ To get the most of this repository it's best to follow theses steps:
 [Gradient Boosting algorithms](https://github.com/MouhebAbdelhafidh/ML-Ride/tree/master/Gradient%20Boosting) <br>
 **Unsupervised Learning :** <br>
 [K-means clustering](https://github.com/MouhebAbdelhafidh/ML-Ride/tree/master/K-means%20clustering) <br>
+
+## </> Other <br>
+[Neural networks](https://github.com/MouhebAbdelhafidh/ML-Ride/tree/master/Neural%20Networks) <br>
+[Model Context Protocol (MCP)](https://github.com/MouhebAbdelhafidh/ML-Ride/tree/master/MCP) <br>
