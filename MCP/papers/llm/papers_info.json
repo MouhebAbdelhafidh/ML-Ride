@@ -1,0 +1,62 @@
+{
+  "2412.18022v1": {
+    "title": "Trustworthy and Efficient LLMs Meet Databases",
+    "authors": [
+      "Kyoungmin Kim",
+      "Anastasia Ailamaki"
+    ],
+    "summary": "In the rapidly evolving AI era with large language models (LLMs) at the core,\nmaking LLMs more trustworthy and efficient, especially in output generation\n(inference), has gained significant attention. This is to reduce plausible but\nfaulty LLM outputs (a.k.a hallucinations) and meet the highly increased\ninference demands. This tutorial explores such efforts and makes them\ntransparent to the database community. Understanding these efforts is essential\nin harnessing LLMs in database tasks and adapting database techniques to LLMs.\nFurthermore, we delve into the synergy between LLMs and databases, highlighting\nnew opportunities and challenges in their intersection. This tutorial aims to\nshare with database researchers and practitioners essential concepts and\nstrategies around LLMs, reduce the unfamiliarity of LLMs, and inspire joining\nin the intersection between LLMs and databases.",
+    "pdf_url": "http://arxiv.org/pdf/2412.18022v1",
+    "published": "2024-12-23"
+  },
+  "2406.10300v1": {
+    "title": "Large Language Models as Software Components: A Taxonomy for LLM-Integrated Applications",
+    "authors": [
+      "Irene Weber"
+    ],
+    "summary": "Large Language Models (LLMs) have become widely adopted recently. Research\nexplores their use both as autonomous agents and as tools for software\nengineering. LLM-integrated applications, on the other hand, are software\nsystems that leverage an LLM to perform tasks that would otherwise be\nimpossible or require significant coding effort. While LLM-integrated\napplication engineering is emerging as new discipline, its terminology,\nconcepts and methods need to be established. This study provides a taxonomy for\nLLM-integrated applications, offering a framework for analyzing and describing\nthese systems. It also demonstrates various ways to utilize LLMs in\napplications, as well as options for implementing such integrations.\n  Following established methods, we analyze a sample of recent LLM-integrated\napplications to identify relevant dimensions. We evaluate the taxonomy by\napplying it to additional cases. This review shows that applications integrate\nLLMs in numerous ways for various purposes. Frequently, they comprise multiple\nLLM integrations, which we term ``LLM components''. To gain a clear\nunderstanding of an application's architecture, we examine each LLM component\nseparately. We identify thirteen dimensions along which to characterize an LLM\ncomponent, including the LLM skills leveraged, the format of the output, and\nmore. LLM-integrated applications are described as combinations of their LLM\ncomponents. We suggest a concise representation using feature vectors for\nvisualization.\n  The taxonomy is effective for describing LLM-integrated applications. It can\ncontribute to theory building in the nascent field of LLM-integrated\napplication engineering and aid in developing such systems. Researchers and\npractitioners explore numerous creative ways to leverage LLMs in applications.\nThough challenges persist, integrating LLMs may revolutionize the way software\nsystems are built.",
+    "pdf_url": "http://arxiv.org/pdf/2406.10300v1",
+    "published": "2024-06-13"
+  },
+  "2405.19888v1": {
+    "title": "Parrot: Efficient Serving of LLM-based Applications with Semantic Variable",
+    "authors": [
+      "Chaofan Lin",
+      "Zhenhua Han",
+      "Chengruidong Zhang",
+      "Yuqing Yang",
+      "Fan Yang",
+      "Chen Chen",
+      "Lili Qiu"
+    ],
+    "summary": "The rise of large language models (LLMs) has enabled LLM-based applications\n(a.k.a. AI agents or co-pilots), a new software paradigm that combines the\nstrength of LLM and conventional software. Diverse LLM applications from\ndifferent tenants could design complex workflows using multiple LLM requests to\naccomplish one task. However, they have to use the over-simplified\nrequest-level API provided by today's public LLM services, losing essential\napplication-level information. Public LLM services have to blindly optimize\nindividual LLM requests, leading to sub-optimal end-to-end performance of LLM\napplications.\n  This paper introduces Parrot, an LLM service system that focuses on the\nend-to-end experience of LLM-based applications. Parrot proposes Semantic\nVariable, a unified abstraction to expose application-level knowledge to public\nLLM services. A Semantic Variable annotates an input/output variable in the\nprompt of a request, and creates the data pipeline when connecting multiple LLM\nrequests, providing a natural way to program LLM applications. Exposing\nSemantic Variables to the public LLM service allows it to perform conventional\ndata flow analysis to uncover the correlation across multiple LLM requests.\nThis correlation opens a brand-new optimization space for the end-to-end\nperformance of LLM-based applications. Extensive evaluations demonstrate that\nParrot can achieve up to an order-of-magnitude improvement for popular and\npractical use cases of LLM applications.",
+    "pdf_url": "http://arxiv.org/pdf/2405.19888v1",
+    "published": "2024-05-30"
+  },
+  "2311.10372v2": {
+    "title": "A Survey of Large Language Models for Code: Evolution, Benchmarking, and Future Trends",
+    "authors": [
+      "Zibin Zheng",
+      "Kaiwen Ning",
+      "Yanlin Wang",
+      "Jingwen Zhang",
+      "Dewu Zheng",
+      "Mingxi Ye",
+      "Jiachi Chen"
+    ],
+    "summary": "General large language models (LLMs), represented by ChatGPT, have\ndemonstrated significant potential in tasks such as code generation in software\nengineering. This has led to the development of specialized LLMs for software\nengineering, known as Code LLMs. A considerable portion of Code LLMs is derived\nfrom general LLMs through model fine-tuning. As a result, Code LLMs are often\nupdated frequently and their performance can be influenced by the base LLMs.\nHowever, there is currently a lack of systematic investigation into Code LLMs\nand their performance. In this study, we conduct a comprehensive survey and\nanalysis of the types of Code LLMs and their differences in performance\ncompared to general LLMs. We aim to address three questions: (1) What LLMs are\nspecifically designed for software engineering tasks, and what is the\nrelationship between these Code LLMs? (2) Do Code LLMs really outperform\ngeneral LLMs in software engineering tasks? (3) Which LLMs are more proficient\nin different software engineering tasks? To answer these questions, we first\ncollect relevant literature and work from five major databases and open-source\ncommunities, resulting in 134 works for analysis. Next, we categorize the Code\nLLMs based on their publishers and examine their relationships with general\nLLMs and among themselves. Furthermore, we investigate the performance\ndifferences between general LLMs and Code LLMs in various software engineering\ntasks to demonstrate the impact of base models and Code LLMs. Finally, we\ncomprehensively maintained the performance of LLMs across multiple mainstream\nbenchmarks to identify the best-performing LLMs for each software engineering\ntask. Our research not only assists developers of Code LLMs in choosing base\nmodels for the development of more advanced LLMs but also provides insights for\npractitioners to better understand key improvement directions for Code LLMs.",
+    "pdf_url": "http://arxiv.org/pdf/2311.10372v2",
+    "published": "2023-11-17"
+  },
+  "2411.15764v1": {
+    "title": "LLM Online Spatial-temporal Signal Reconstruction Under Noise",
+    "authors": [
+      "Yi Yan",
+      "Dayu Qin",
+      "Ercan Engin Kuruoglu"
+    ],
+    "summary": "This work introduces the LLM Online Spatial-temporal Reconstruction (LLM-OSR)\nframework, which integrates Graph Signal Processing (GSP) and Large Language\nModels (LLMs) for online spatial-temporal signal reconstruction. The LLM-OSR\nutilizes a GSP-based spatial-temporal signal handler to enhance graph signals\nand employs LLMs to predict missing values based on spatiotemporal patterns.\nThe performance of LLM-OSR is evaluated on traffic and meteorological datasets\nunder varying Gaussian noise levels. Experimental results demonstrate that\nutilizing GPT-4-o mini within the LLM-OSR is accurate and robust under Gaussian\nnoise conditions. The limitations are discussed along with future research\ninsights, emphasizing the potential of combining GSP techniques with LLMs for\nsolving spatiotemporal prediction tasks.",
+    "pdf_url": "http://arxiv.org/pdf/2411.15764v1",
+    "published": "2024-11-24"
+  }
+}

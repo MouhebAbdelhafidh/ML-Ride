@@ -1,0 +1,67 @@
+{
+  "2407.10153v1": {
+    "title": "Look Within, Why LLMs Hallucinate: A Causal Perspective",
+    "authors": [
+      "He Li",
+      "Haoang Chi",
+      "Mingyu Liu",
+      "Wenjing Yang"
+    ],
+    "summary": "The emergence of large language models (LLMs) is a milestone in generative\nartificial intelligence, achieving significant success in text comprehension\nand generation tasks. Despite the tremendous success of LLMs in many downstream\ntasks, they suffer from severe hallucination problems, posing significant\nchallenges to the practical applications of LLMs. Most of the works about LLMs'\nhallucinations focus on data quality. Self-attention is a core module in\ntransformer-based LLMs, while its potential relationship with LLMs'\nhallucination has been hardly investigated. To fill this gap, we study this\nproblem from a causal perspective. We propose a method to intervene in LLMs'\nself-attention layers and maintain their structures and sizes intact.\nSpecifically, we disable different self-attention layers in several popular\nopen-source LLMs and then compare their degrees of hallucination with the\noriginal ones. We evaluate the intervened LLMs on hallucination assessment\nbenchmarks and conclude that disabling some specific self-attention layers in\nthe front or tail of the LLMs can alleviate hallucination issues. The study\npaves a new way for understanding and mitigating LLMs' hallucinations.",
+    "pdf_url": "http://arxiv.org/pdf/2407.10153v1",
+    "published": "2024-07-14"
+  },
+  "2412.18022v1": {
+    "title": "Trustworthy and Efficient LLMs Meet Databases",
+    "authors": [
+      "Kyoungmin Kim",
+      "Anastasia Ailamaki"
+    ],
+    "summary": "In the rapidly evolving AI era with large language models (LLMs) at the core,\nmaking LLMs more trustworthy and efficient, especially in output generation\n(inference), has gained significant attention. This is to reduce plausible but\nfaulty LLM outputs (a.k.a hallucinations) and meet the highly increased\ninference demands. This tutorial explores such efforts and makes them\ntransparent to the database community. Understanding these efforts is essential\nin harnessing LLMs in database tasks and adapting database techniques to LLMs.\nFurthermore, we delve into the synergy between LLMs and databases, highlighting\nnew opportunities and challenges in their intersection. This tutorial aims to\nshare with database researchers and practitioners essential concepts and\nstrategies around LLMs, reduce the unfamiliarity of LLMs, and inspire joining\nin the intersection between LLMs and databases.",
+    "pdf_url": "http://arxiv.org/pdf/2412.18022v1",
+    "published": "2024-12-23"
+  },
+  "2503.11205v1": {
+    "title": "LLaVA-MLB: Mitigating and Leveraging Attention Bias for Training-Free Video LLMs",
+    "authors": [
+      "Leqi Shen",
+      "Tao He",
+      "Guoqiang Gong",
+      "Fan Yang",
+      "Yifeng Zhang",
+      "Pengzhang Liu",
+      "Sicheng Zhao",
+      "Guiguang Ding"
+    ],
+    "summary": "Training-free video large language models (LLMs) leverage pretrained Image\nLLMs to process video content without the need for further training. A key\nchallenge in such approaches is the difficulty of retaining essential visual\nand temporal information, constrained by the token limits in Image LLMs. To\naddress this, we propose a two-stage method for selecting query-relevant tokens\nbased on the LLM attention scores: compressing the video sequence and then\nexpanding the sequence. However, during the compression stage, Image LLMs often\nexhibit a positional attention bias in video sequences, where attention is\noverly concentrated on later frames, causing early-frame information to be\nunderutilized. To alleviate this attention bias during sequence compression, we\npropose Gridded Attention Pooling for preserving spatiotemporal structure.\nAdditionally, we introduce Visual Summarization Tail to effectively utilize\nthis bias, facilitating overall video understanding during sequence expansion.\nIn this way, our method effectively Mitigates and Leverages attention Bias\n(LLaVA-MLB), enabling the frozen Image LLM for detailed video understanding.\nExperiments on several benchmarks demonstrate that our approach outperforms\nstate-of-the-art methods, achieving superior performance in both efficiency and\naccuracy. Our code will be released.",
+    "pdf_url": "http://arxiv.org/pdf/2503.11205v1",
+    "published": "2025-03-14"
+  },
+  "2406.15765v1": {
+    "title": "Unveiling and Harnessing Hidden Attention Sinks: Enhancing Large Language Models without Training through Attention Calibration",
+    "authors": [
+      "Zhongzhi Yu",
+      "Zheng Wang",
+      "Yonggan Fu",
+      "Huihong Shi",
+      "Khalid Shaikh",
+      "Yingyan Celine Lin"
+    ],
+    "summary": "Attention is a fundamental component behind the remarkable achievements of\nlarge language models (LLMs). However, our current understanding of the\nattention mechanism, especially regarding how attention distributions are\nestablished, remains limited. Inspired by recent studies that explore the\npresence of attention sink in the initial token, which receives\ndisproportionately large attention scores despite their lack of semantic\nimportance, this work delves deeper into this phenomenon. We aim to provide a\nmore profound understanding of the existence of attention sinks within LLMs and\nto uncover ways to enhance the achievable accuracy of LLMs by directly\noptimizing the attention distributions, without the need for weight finetuning.\nSpecifically, this work begins with comprehensive visualizations of the\nattention distributions in LLMs during inference across various inputs and\ntasks. Based on these visualizations, to the best of our knowledge, we are the\nfirst to discover that (1) attention sinks occur not only at the start of\nsequences but also within later tokens of the input, and (2) not all attention\nsinks have a positive impact on the achievable accuracy of LLMs. Building upon\nour findings, we propose a training-free Attention Calibration Technique (ACT)\nthat automatically optimizes the attention distributions on the fly during\ninference in an input-adaptive manner. Extensive experiments validate that ACT\nconsistently enhances the accuracy of various LLMs across different\napplications. Specifically, ACT achieves an average improvement of up to 7.30%\nin accuracy across different datasets when applied to Llama-30B. Our code is\navailable at https://github.com/GATECH-EIC/ACT.",
+    "pdf_url": "http://arxiv.org/pdf/2406.15765v1",
+    "published": "2024-06-22"
+  },
+  "2505.02130v1": {
+    "title": "Attention Mechanisms Perspective: Exploring LLM Processing of Graph-Structured Data",
+    "authors": [
+      "Zhong Guan",
+      "Likang Wu",
+      "Hongke Zhao",
+      "Ming He",
+      "Jianpin Fan"
+    ],
+    "summary": "Attention mechanisms are critical to the success of large language models\n(LLMs), driving significant advancements in multiple fields. However, for\ngraph-structured data, which requires emphasis on topological connections, they\nfall short compared to message-passing mechanisms on fixed links, such as those\nemployed by Graph Neural Networks (GNNs). This raises a question: ``Does\nattention fail for graphs in natural language settings?'' Motivated by these\nobservations, we embarked on an empirical study from the perspective of\nattention mechanisms to explore how LLMs process graph-structured data. The\ngoal is to gain deeper insights into the attention behavior of LLMs over graph\nstructures. We uncovered unique phenomena regarding how LLMs apply attention to\ngraph-structured data and analyzed these findings to improve the modeling of\nsuch data by LLMs. The primary findings of our research are: 1) While LLMs can\nrecognize graph data and capture text-node interactions, they struggle to model\ninter-node relationships within graph structures due to inherent architectural\nconstraints. 2) The attention distribution of LLMs across graph nodes does not\nalign with ideal structural patterns, indicating a failure to adapt to graph\ntopology nuances. 3) Neither fully connected attention nor fixed connectivity\nis optimal; each has specific limitations in its application scenarios.\nInstead, intermediate-state attention windows improve LLM training performance\nand seamlessly transition to fully connected windows during inference. Source\ncode: \\href{https://github.com/millioniron/LLM_exploration}{LLM4Exploration}",
+    "pdf_url": "http://arxiv.org/pdf/2505.02130v1",
+    "published": "2025-05-04"
+  }
+}
