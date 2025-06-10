@@ -1,0 +1,7 @@
+arxiv
+fastmcp
+mcp
+ollama
+python-dotenv
+nest-asyncio
+typing-extensions

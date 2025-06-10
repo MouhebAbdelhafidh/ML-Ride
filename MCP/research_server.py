@@ -1,17 +1,17 @@
 import arxiv
 import json
 import os
-from typing import List
+from typing import List, Dict
 from mcp.server.fastmcp import FastMCP
 
-
 PAPER_DIR = "papers"
+os.makedirs(PAPER_DIR, exist_ok=True)
 
 # Initialize FastMCP server
 mcp = FastMCP("research")
 
 @mcp.tool()
-def search_papers(topic: str, max_results: int = 5) -> List[str]:
+async def search_papers(topic: str, max_results: int = 5) -> List[str]:
     """
     Search for papers on arXiv based on a topic and store their information.
     
@@ -22,93 +22,74 @@ def search_papers(topic: str, max_results: int = 5) -> List[str]:
     Returns:
         List of paper IDs found in the search
     """
-    
-    # Use arxiv to find the papers 
     client = arxiv.Client()
-
-    # Search for the most relevant articles matching the queried topic
     search = arxiv.Search(
-        query = topic,
-        max_results = max_results,
-        sort_by = arxiv.SortCriterion.Relevance
+        query=topic,
+        max_results=max_results,
+        sort_by=arxiv.SortCriterion.Relevance
     )
-
-    papers = client.results(search)
     
-    # Create directory for this topic
     path = os.path.join(PAPER_DIR, topic.lower().replace(" ", "_"))
     os.makedirs(path, exist_ok=True)
-    
     file_path = os.path.join(path, "papers_info.json")
-
-    # Try to load existing papers info
+    
     try:
-        with open(file_path, "r") as json_file:
-            papers_info = json.load(json_file)
+        with open(file_path, "r") as f:
+            papers_info = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         papers_info = {}
-
-    # Process each paper and add to papers_info  
+    
     paper_ids = []
-    for paper in papers:
-        paper_ids.append(paper.get_short_id())
-        paper_info = {
+    for paper in client.results(search):
+        paper_id = paper.get_short_id()
+        paper_ids.append(paper_id)
+        papers_info[paper_id] = {
             'title': paper.title,
             'authors': [author.name for author in paper.authors],
             'summary': paper.summary,
             'pdf_url': paper.pdf_url,
             'published': str(paper.published.date())
         }
-        papers_info[paper.get_short_id()] = paper_info
     
-    # Save updated papers_info to json file
-    with open(file_path, "w") as json_file:
-        json.dump(papers_info, json_file, indent=2)
+    with open(file_path, "w") as f:
+        json.dump(papers_info, f, indent=2)
     
-    print(f"Results are saved in: {file_path}")
-    
-    return paper_ids
+    return {
+        "content": json.dumps({
+            "paper_ids": paper_ids,
+            "save_location": file_path
+        }, indent=2)
+    }
 
 @mcp.tool()
-def extract_info(paper_id: str) -> str:
+async def extract_info(paper_id: str) -> Dict:
     """
-    Search for information about a specific paper across all topic directories.
+    Get information about a specific paper.
     
     Args:
-        paper_id: The ID of the paper to look for
+        paper_id: The paper ID to look for
         
     Returns:
-        JSON string with paper information if found, error message if not found
+        Dictionary with paper information if found, error message if not
     """
- 
     for item in os.listdir(PAPER_DIR):
         item_path = os.path.join(PAPER_DIR, item)
         if os.path.isdir(item_path):
             file_path = os.path.join(item_path, "papers_info.json")
             if os.path.isfile(file_path):
                 try:
-                    with open(file_path, "r") as json_file:
-                        papers_info = json.load(json_file)
+                    with open(file_path, "r") as f:
+                        papers_info = json.load(f)
                         if paper_id in papers_info:
-                            return json.dumps(papers_info[paper_id], indent=2)
+                            return {
+                                "content": json.dumps(papers_info[paper_id], indent=2)
+                            }
                 except (FileNotFoundError, json.JSONDecodeError) as e:
-                    print(f"Error reading {file_path}: {str(e)}")
                     continue
     
-    return f"There's no saved information related to paper {paper_id}."
-
-# # Resource implementation
-# @mcp.resource("weather//{location}")
-# def weather_resource(location: str) -> str:
-#     """Provide weather data as a resource."""
-#     return f"Hello!"
-
-# # Prompt implementation
-# @mcp.prompt()
-# def weather_report() -> str:
-#     """Create a weather report prompt."""
-#     return f"""You are a weather reporter. Weather report for ?"""
+    return {
+        "content": f"No information found for paper {paper_id}"
+    }
 
 if __name__ == "__main__":
-    # Initialize and run the server
     mcp.run(transport='stdio')
